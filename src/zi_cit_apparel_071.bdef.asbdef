@@ -1,0 +1,40 @@
+managed implementation in class zbp_i_cit_apparel_071 unique;
+strict ( 2 );
+
+define behavior for ZI_CIT_APPAREL_071 alias Apparel
+persistent table zcit_apparel_071
+lock master
+authorization master ( global, instance )
+etag master local_last_changed_at
+{
+  create;
+  update;
+  delete;
+
+  field ( numbering : managed, readonly ) design_uuid;
+  field ( readonly ) created_at, created_by, last_changed_at, last_changed_by, local_last_changed_at;
+
+  mapping for zcit_apparel_071
+  {
+    design_uuid = design_uuid;
+    design_id = design_id;
+    description = description;
+    category = category;
+    collection_season = collection_season;
+    material_type = material_type;
+    color_code = color_code;
+    size_range = size_range;
+    pattern_type = pattern_type;
+    status = status;
+    priority = priority;
+    estimated_cost = estimated_cost;
+    retail_price = retail_price;
+    currency_code = currency_code;
+    target_delivery_date = target_delivery_date;
+    created_by = created_by;
+    created_at = created_at;
+    last_changed_by = last_changed_by;
+    last_changed_at = last_changed_at;
+    local_last_changed_at = local_last_changed_at;
+  }
+}

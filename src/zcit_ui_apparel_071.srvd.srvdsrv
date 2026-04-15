@@ -1,0 +1,4 @@
+@EndUserText.label: 'Apparel Design Tracker Service'
+define service ZCIT_UI_APPAREL_071 {
+  expose ZC_CIT_APPAREL_071 as Apparel;
+}

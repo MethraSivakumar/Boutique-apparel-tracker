@@ -1,0 +1,64 @@
+@Metadata.layer: #CUSTOMER
+@UI: {
+  headerInfo: {
+    typeName: 'Apparel Design',
+    typeNamePlural: 'Apparel Designs',
+    title: { type: #STANDARD, label: 'Design ID', value: 'design_id' },
+    description: { value: 'description' }
+  }
+}
+annotate view ZC_CIT_APPAREL_071 with
+{
+  /* --- Facets Section --- */
+  @UI.facet: [
+    {
+      id: 'idGeneralInfo',
+      type: #IDENTIFICATION_REFERENCE,
+      label: 'General Information',
+      position: 10
+    }
+  ]
+
+  /* --- Fields Section --- */
+  
+  @UI.hidden: true
+  design_uuid;
+
+  @UI: { lineItem:       [ { position: 10, label: 'Design ID' } ],
+         identification: [ { position: 10, label: 'Design ID' } ],
+         selectionField: [ { position: 10 } ] }
+  design_id;
+
+  @UI: { lineItem:       [ { position: 20, label: 'Description' } ],
+         identification: [ { position: 20, label: 'Description' } ] }
+  description;
+
+  @UI: { lineItem:       [ { position: 30, label: 'Category' } ],
+         identification: [ { position: 30, label: 'Category' } ],
+         selectionField: [ { position: 20 } ] }
+  category;
+
+  @UI: { lineItem:       [ { position: 40, label: 'Season' } ],
+         identification: [ { position: 40, label: 'Season' } ] }
+  collection_season;
+
+  @UI: { lineItem:       [ { position: 50, label: 'Material Type' } ],
+         identification: [ { position: 50, label: 'Material Type' } ] }
+  material_type;
+
+  @UI: { lineItem:       [ { position: 60, label: 'Status' } ],
+         identification: [ { position: 60, label: 'Status' } ],
+         selectionField: [ { position: 30 } ] }
+  status;
+
+  @UI: { lineItem:       [ { position: 70, label: 'Retail Price' } ],
+         identification: [ { position: 70, label: 'Retail Price' } ] }
+  retail_price;
+
+  @UI: { lineItem:       [ { position: 80, label: 'Target Date' } ],
+         identification: [ { position: 80, label: 'Target Date' } ] }
+  target_delivery_date;
+
+  @UI.hidden: true
+  local_last_changed_at;
+}
